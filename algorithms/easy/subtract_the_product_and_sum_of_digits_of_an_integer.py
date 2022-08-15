@@ -1,4 +1,5 @@
 # 1281. Subtract the Product and Sum of Digits of an Integer
+
 import math
 
 class Solution:
@@ -6,5 +7,5 @@ class Solution:
         ns = [int(i) for i in str(n)]
         return math.prod(ns) - sum(ns)
 
-ans = Solution().subtractProductAndSum(n = 234)
-print(ans)
+sol = Solution().subtractProductAndSum(n = 234)
+print(sol)

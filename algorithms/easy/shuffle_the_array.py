@@ -1,4 +1,5 @@
 # 1470. Shuffle the Array
+
 from typing import List
 
 class Solution:
@@ -10,5 +11,5 @@ class Solution:
             
         return result
 
-ans = Solution().shuffle(nums = [2,5,1,3,4,7], n = 3)
-print(ans)
+sol = Solution().shuffle(nums = [2,5,1,3,4,7], n = 3)
+print(sol)

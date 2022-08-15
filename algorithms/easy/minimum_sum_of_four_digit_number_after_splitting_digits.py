@@ -5,5 +5,5 @@ class Solution:
         n = sorted([*str(num)])
         return int(n[0] + n[2]) + int(n[1] + n[3])
 
-ans = Solution().minimumSum(num = 2932)
-print(ans)
+sol = Solution().minimumSum(num = 2932)
+print(sol)

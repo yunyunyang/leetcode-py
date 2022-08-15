@@ -1,4 +1,5 @@
 # 1480. Running Sum of 1d Array
+
 from typing import List
 
 class Solution:
@@ -8,5 +9,5 @@ class Solution:
             
         return nums
 
-ans = Solution().runningSum(nums = [1,2,3,4])
-print(ans)
+sol = Solution().runningSum(nums = [1,2,3,4])
+print(sol)

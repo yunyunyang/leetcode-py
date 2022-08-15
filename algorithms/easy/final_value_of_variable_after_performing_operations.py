@@ -14,5 +14,5 @@ class Solution:
         return result
 
 
-ans = Solution().finalValueAfterOperations(operations = ["--X","X++","X++"])
-print(ans)
+sol = Solution().finalValueAfterOperations(operations = ["--X","X++","X++"])
+print(sol)

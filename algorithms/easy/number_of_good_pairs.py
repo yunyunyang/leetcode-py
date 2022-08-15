@@ -1,4 +1,5 @@
 # 1512. Number of Good Pairs
+
 from typing import List
 
 class Solution:
@@ -11,5 +12,5 @@ class Solution:
 
         return goodPairs
 
-ans = Solution().numIdenticalPairs(nums = [1,2,3,1,1,3])
-print(ans)
+sol = Solution().numIdenticalPairs(nums = [1,2,3,1,1,3])
+print(sol)

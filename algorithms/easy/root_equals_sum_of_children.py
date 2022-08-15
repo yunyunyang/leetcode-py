@@ -1,4 +1,5 @@
 # 2236. Root Equals Sum of Children
+
 from typing import Optional
 
 # Definition for a binary tree node.
@@ -14,5 +15,5 @@ class Solution:
 
 
 node = TreeNode(val = 10, left = TreeNode(val=4), right = TreeNode(val=6))
-ans = Solution().checkTree(root=node)
-print(ans)
+sol = Solution().checkTree(root=node)
+print(sol)

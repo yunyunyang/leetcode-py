@@ -9,5 +9,5 @@ class Solution:
         return count
 
 
-ans = Solution().numJewelsInStones(jewels = "aA", stones = "aAAbbbb")
-print(ans)
+sol = Solution().numJewelsInStones(jewels = "aA", stones = "aAAbbbb")
+print(sol)

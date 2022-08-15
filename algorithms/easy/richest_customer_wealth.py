@@ -1,4 +1,5 @@
 # Richest Customer Wealth
+
 from typing import List
 
 class Solution:
@@ -11,5 +12,5 @@ class Solution:
 
         return max
 
-ans = Solution().maximumWealth(accounts = [[1,5],[7,3],[3,5]])
-print(ans)
+sol = Solution().maximumWealth(accounts = [[1,5],[7,3],[3,5]])
+print(sol)
