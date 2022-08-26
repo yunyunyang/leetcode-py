@@ -15,7 +15,6 @@ class Solution:
             head = head.next
 
         nodes.reverse()
-        
         for i, n in enumerate(nodes):
             if n == 1:
                 output += 2 ** i
