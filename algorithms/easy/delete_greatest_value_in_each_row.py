@@ -19,5 +19,5 @@ class Solution:
         return output
 
 
-sol = Solution().deleteGreatestValue(grid = [[10]])
+sol = Solution().deleteGreatestValue(grid = [[1,2,4],[3,3,1]])
 print(sol)
