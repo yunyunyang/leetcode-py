@@ -1,3 +1,5 @@
+# 520. Detect Capital
+
 class Solution:
     def detectCapitalUse(self, word: str) -> bool:
         if len(word) == 1:
