@@ -1,6 +1,7 @@
 class Solution:
     def detectCapitalUse(self, word: str) -> bool:
-        return True if len(word) == 1 else False
+        if len(word) == 1:
+            return
 
         num_capital = num_not_capital = len(word) - 1
         if ord(word[0]) in range(65, 90):
