@@ -18,7 +18,6 @@ class Solution:
             
             nonlocal sum
             if node.val and node.val >= low and node.val <= high:
-                print(node.val)
                 sum += node.val
 
             dfs(node.left)
