@@ -16,10 +16,8 @@ class Solution:
             head.next = prev
             prev = head
             head = next
-            
         return prev
 
-# head = [1,2,3,4,5]
 head = ListNode(val=1, next=ListNode(val=2, next=ListNode(val=3, next=ListNode(val=4, next=ListNode(val=5)))))
 sol = Solution().reverseList(head)
 print(sol)
