@@ -2,15 +2,28 @@
 
 from typing import List
 
+
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        goodPairs = 0
-        for i in range(0, len(nums)):
-            for j in range(i+1, len(nums)):
-                if nums[i] == nums[j]:
-                    goodPairs += 1
+        if len(nums) == len(set(nums)):
+            return 0
 
-        return goodPairs
+        hash_map = {}
+        for k, v in enumerate(nums):
+            if v not in hash_map:
+                hash_map[v] = [k]
+            else:
+                hash_map[v].append(k)
 
-sol = Solution().numIdenticalPairs(nums = [1,2,3,1,1,3])
+        output = 0
+        for i in hash_map.values():
+            s = len(i)
+            if len(i) > 1:
+                o = s * (s - 1) // 2
+                output += o
+
+        return output
+
+
+sol = Solution().numIdenticalPairs(nums=[1, 2, 3, 1, 1, 3])
 print(sol)
