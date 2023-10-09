@@ -15,7 +15,6 @@ class Solution:
                     i += 1
 
                 r = i - 1
-            # return [l, r]
 
         return [l, r]
 
