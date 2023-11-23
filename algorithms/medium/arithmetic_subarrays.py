@@ -9,6 +9,7 @@ class Solution:
         for i in range(len(l)):
             subary = nums[l[i]:r[i]+1]
             subary.sort()
+
             diff = subary[0] - subary[1]
             check = True
             for i in range(1, len(subary)-1):
