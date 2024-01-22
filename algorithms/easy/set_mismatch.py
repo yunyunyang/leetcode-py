@@ -12,9 +12,11 @@ class Solution:
             if nums.count(i) == 2:
                 err[0] = i
 
-        print([1, 2] ^ [1, 2])
+            if err[0] != 0 and err[1] != 0:
+                return err
+
         return err
 
 
 sol = Solution().findErrorNums(nums=[1, 2, 2, 4])
-# print(sol)
+print(sol)
