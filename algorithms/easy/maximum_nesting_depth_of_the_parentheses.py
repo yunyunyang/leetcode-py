@@ -2,16 +2,19 @@
 
 class Solution:
     def maxDepth(self, s: str) -> int:
-        max, cur = 0, 0
-        for i in list(s):
-            if i == "(":
-                cur += 1
-            if i == ")":
-                cur -= 1
-            if cur >= max:
-                max = cur
+        max_depth = 0
+        stack = []
 
-        return max
+        for c in s:
+            if c == '(':
+                stack.append('(')
+            if c == ')':
+                stack.pop()
 
-sol = Solution().maxDepth(s = "(1+(2*3)+((8)/4))+1")
+            max_depth = max(max_depth, len(stack))
+
+        return max_depth
+
+
+sol = Solution().maxDepth(s="(1+(2*3)+((8)/4))+1")
 print(sol)
