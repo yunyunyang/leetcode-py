@@ -5,20 +5,22 @@ from typing import List
 
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        if digits[-1] < 9:
-            digits[-1] += 1
-        else:
-            for i in range(len(digits)-1, -1, -1):
+        digits = digits[::-1]
+        i, one = 0, 1
+
+        while one:
+            if i < len(digits):
                 if digits[i] == 9:
                     digits[i] = 0
                 else:
                     digits[i] += 1
-                    break
+                    one = 0
+            else:
+                digits.append(1)
+                one = 0
+            i += 1
 
-        if digits.count(0) == len(digits):
-            digits.insert(0, 1)
-
-        return digits
+        return digits[::-1]
 
 
 sol = Solution().plusOne(digits=[9,8,9])
