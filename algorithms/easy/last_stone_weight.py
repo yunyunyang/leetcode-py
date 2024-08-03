@@ -1,20 +1,22 @@
 # 1046. Last Stone Weight
 
 from typing import List
+from heapq import heappush, heappop
 
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
-        if len(stones) == 1:
-            return stones[0]
-        
-        stones.sort()
-        while len(stones) > 1:
-            m = stones.pop(-1)
-            n = stones.pop(-1)
-            stones.append(m-n)
-            stones.sort()
+        heap = []
+        for stone in stones:
+            stone *= -1
+            heappush(heap, stone)
 
-        return stones[0]
+        while len(heap) > 1:
+            x = heappop(heap)
+            y = heappop(heap)
+            diff = x - y if x < y else y - x
+            heappush(heap, diff)
+
+        return heappop(heap) * -1
     
 sol = Solution().lastStoneWeight(stones = [2,7,4,1,8,1])
 print(sol)
