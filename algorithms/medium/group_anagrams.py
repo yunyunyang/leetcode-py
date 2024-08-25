@@ -1,21 +1,18 @@
 # 49. Group Anagrams
 
 from typing import List
+import collections
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        if len(strs) <= 1:
-            return [strs]
-        
-        m = {}
+        output = collections.defaultdict(list)
         for s in strs:
-            w = "".join(sorted(s))
-            if w not in m:
-                m[w] = [s]
-            else:
-                m[w].append(s)
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+            output[tuple(count)].append(s)
 
-        return m.values()
+        return output.values()
     
 sol = Solution().groupAnagrams(strs = ["eat","tea","tan","ate","nat","bat"])
 print(sol)
