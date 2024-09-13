@@ -13,22 +13,19 @@ class TreeNode:
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         output = []
+        q = deque([root])
 
-        q = deque()
-        if root:
-            q.append(root)
-            
         while q:
             right_node = None
-            for _ in range(len(q)):
+            size = len(q)
+            for _ in range(size):
                 node = q.popleft()
-                right_node = node.val
-                
-                if node.left:
+                if node:
+                    right_node = node
                     q.append(node.left)
-                if node.right:
                     q.append(node.right)
-                
-            output.append(right_node)
-            
+
+            if right_node:
+                output.append(right_node.val)
+
         return output
