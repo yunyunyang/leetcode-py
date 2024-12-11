@@ -1,5 +1,4 @@
-# 2981. Find Longest Special Substring That Occurs Thrice I
-
+# 2981. Find Longest Special Substring That Occurs Thrice I (Google)
 def maximumLength(self, s: str) -> int:
     count = {}
     for i in range(len(s)):
