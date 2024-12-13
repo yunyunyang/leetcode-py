@@ -1,7 +1,6 @@
 # 2593. Find Score of an Array After Marking All Elements
 
 from typing import List
-
 import heapq
 
 def findScore(self, nums: List[int]) -> int:
