@@ -2,20 +2,22 @@
 
 from typing import List
 
+import heapq
+
 def findScore(self, nums: List[int]) -> int:
-    score, marked = 0, set()
+    score, marked = 0, [0] * len(nums)
     heap = []
     for i, n in enumerate(nums):
         heapq.heappush(heap, (n, i))
     
-    while len(marked) != len(nums):
+    while heap:
         val, idx = heapq.heappop(heap)
-        if idx not in marked:
+        if marked[idx] == 0:
             score += val
-            marked.add(idx)
+            marked[idx] = 1
             if idx - 1 >= 0:
-                marked.add(idx - 1)
+                marked[idx - 1] = 1
             if idx + 1 <= len(nums) - 1:
-                marked.add(idx + 1)
+                marked[idx + 1] = 1
 
     return score
