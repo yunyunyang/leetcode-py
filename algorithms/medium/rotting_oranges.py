@@ -20,14 +20,12 @@ def orangesRotting(self, grid: List[List[int]]) -> int:
         for _ in range(size):
             r, c = q.popleft()
             for dr, dc in directions:
-                if (r + dr not in range(rows) or 
-                    c + dc not in range(cols) or 
-                    grid[r + dr][c + dc] != 1):
-                    continue
-
-                q.append([r + dr, c + dc])
-                grid[r + dr][c + dc] = 2
-                fresh -= 1
+                if (r + dr in range(rows) and 
+                    c + dc in range(cols) and 
+                    grid[r + dr][c + dc] == 1):
+                    q.append([r + dr, c + dc])
+                    grid[r + dr][c + dc] = 2
+                    fresh -= 1
         time += 1
     
     return time if fresh == 0 else -1
