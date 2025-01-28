@@ -1,6 +1,7 @@
 # 2948. Make Lexicographically Smallest Array by Swapping Elements
 
 from typing import List
+from collections import deque
 
 def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:
     groups = []
