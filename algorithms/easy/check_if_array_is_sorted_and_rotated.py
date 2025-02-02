@@ -9,7 +9,7 @@ def check(self, nums: List[int]) -> bool:
         return True
 
     for i in range(1, 2 * n):
-        if nums[i % n] >= nums[(i % n) - 1]:
+        if nums[i % n] >= nums[(i - 1) % n]:
             count += 1
         else:
             count = 1
