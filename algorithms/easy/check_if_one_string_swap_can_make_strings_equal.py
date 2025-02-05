@@ -6,16 +6,15 @@ def areAlmostEqual(self, s1: str, s2: str) -> bool:
     if len(s1) != len(s2):
         return False
 
-    swap, indexes = 0, []
+    indexes = []
     for i in range(len(s1)):
         if s1[i] != s2[i]:
-            swap += 1
             indexes.append(i)
-        if swap > 2:
+        if len(indexes) > 2:
             return False
 
     if len(indexes) == 2:
         i, j = indexes            
         return s1[i] == s2[j] and s1[j] == s2[i]
     
-    return swap == 0
+    return len(indexes) == 0
